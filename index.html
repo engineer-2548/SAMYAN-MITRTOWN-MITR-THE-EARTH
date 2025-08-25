@@ -223,8 +223,12 @@
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center px-4 pt-20">
         <div class="container mx-auto text-center">
-            <div class="floating">
-                <span class="text-6xl md:text-8xl">🌱</span>
+            <div class="floating mb-6">
+                <img src="https://lh5.googleusercontent.com/d/1tv4xj-rLk3UZX8WRU4MUn9yibcsgPTEO" 
+                     alt="MITR THE EARTH Logo" 
+                     class="mx-auto rounded-2xl shadow-2xl max-w-xs md:max-w-sm"
+                     onerror="this.style.display='none'; document.getElementById('fallbackEmoji').style.display='block';">
+                <span id="fallbackEmoji" class="text-6xl md:text-8xl" style="display:none;">🌱</span>
             </div>
             <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4 slide-in">
                 <span class="gradient-text">SAMYAN MITRTOWN</span>
@@ -257,11 +261,11 @@
             </div>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button onclick="window.open('https://www.samyan-mitrtown.com/', '_blank')" class="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition pulse-btn">
-                    <i class="fas fa-ticket-alt mr-2"></i> ลงทะเบียนเข้าร่วม
+                <button onclick="document.getElementById('event').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition pulse-btn">
+                    <i class="fas fa-info-circle mr-2"></i> ดูรายละเอียดกิจกรรม
                 </button>
-                <button onclick="document.getElementById('event').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 border-2 border-green-500 rounded-full font-semibold hover:bg-green-500 hover:text-white transition">
-                    <i class="fas fa-info-circle mr-2"></i> ดูรายละเอียด
+                <button onclick="shareEvent()" class="px-8 py-4 border-2 border-green-500 rounded-full font-semibold hover:bg-green-500 hover:text-white transition">
+                    <i class="fas fa-share-alt mr-2"></i> แชร์กิจกรรม
                 </button>
             </div>
         </div>
@@ -277,11 +281,12 @@
             <!-- Event Image -->
             <div class="max-w-4xl mx-auto mb-12">
                 <div class="event-card rounded-2xl overflow-hidden shadow-2xl card-hover">
-                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1200&h=600&fit=crop" 
-                         alt="MITR THE EARTH Event" 
+                    <img src="https://lh5.googleusercontent.com/d/1tv4xj-rLk3UZX8WRU4MUn9yibcsgPTEO" 
+                         alt="MITR THE EARTH Event - ภาพประกอบข่าวอย่างเป็นทางการ" 
                          class="w-full h-auto object-cover"
-                         onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop'">
+                         onerror="this.src='https://drive.google.com/uc?export=view&id=1tv4xj-rLk3UZX8WRU4MUn9yibcsgPTEO'">
                 </div>
+                <p class="text-center mt-4 text-sm opacity-75">ภาพประกอบข่าวอย่างเป็นทางการจาก SAMYAN MITRTOWN</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -401,7 +406,7 @@
                 </p>
                 
                 <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <button onclick="shareEvent()" class="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition">
+                    <button onclick="shareEvent()" class="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition pulse-btn">
                         <i class="fas fa-share-alt mr-2"></i> แชร์กิจกรรม
                     </button>
                     <button onclick="window.open('https://www.facebook.com/samyanmitrtown', '_blank')" class="px-8 py-4 border-2 border-blue-500 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition">
